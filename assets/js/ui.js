@@ -7,27 +7,21 @@ $(function () {
         chkBrowserSize();
     });
 
-
-    var swiper = new Swiper('.point_wrap .swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-            nextEl: '.point_wrap .swiper-button-next',
-            prevEl: '.point_wrap .swiper-button-prev',
-        },
-        pagination: {
-            el: '.point_wrap .swiper-pagination',
-        },
-    });
-
-
     // ===== Scroll to Top ==== 
     $(window).scroll(function () {
         var movie = $('.main_top');
         var movieHeight = $(movie).outerHeight(true);
         if (movie.length > 0) {
             stickyHeader(movieHeight);
+        }
+        if ( $isMobile = true) {
+            if ($(window).scrollTop() == 0){
+                $('#mobileDownload').removeClass('pc_f').addClass('m_f');
+                $('#mobileApply').removeClass('fix');
+            } else {
+                $('#mobileDownload').removeClass('m_f').addClass('pc_f');
+                $('#mobileApply').addClass('fix');
+            }
         }
     });
     // sticky header
@@ -67,7 +61,7 @@ function chkBrowserSize() {
     $winW = $(window).width();
     $winH = $(window).height();
 
-    if ($winW < 1025) {
+    if ($winW < 1165) {
         $isMobile = true;
     } else {
         $isMobile = false;

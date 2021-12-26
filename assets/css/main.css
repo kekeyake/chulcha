@@ -68,6 +68,16 @@ header .inner_cont a.btn_apply {
   margin-left: 20px;
 }
 
+header .inner_cont a.pc_f {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .inner_cont a.m_f {
+  display: none;
+}
+
 .main_top {
   position: relative;
 }
@@ -770,6 +780,9 @@ footer .inner_cont .txt2 {
 }
 
 @media screen and (max-width: 1164px) {
+  .container {
+    padding-bottom: 75px;
+  }
   footer {
     display: none;
   }
@@ -824,6 +837,30 @@ footer .inner_cont .txt2 {
     color: #0868F4;
     margin-left: 0;
     margin-top: 350px;
+  }
+  header .inner_cont a.btn_apply.fix {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    top: auto;
+    margin-top: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    border: 0 solid #000;
+    border-radius: 0;
+    color: #fff;
+    background-color: #0868F4;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+  header .inner_cont a.pc_f {
+    display: none;
+  }
+  header .inner_cont a.m_f {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .main_top .text_box {
     top: 16%;
@@ -1094,7 +1131,7 @@ footer .inner_cont .txt2 {
   }
   .cont_6::after {
     content: '';
-    width: 760px;
+    width: 100%;
     height: 100%;
     position: absolute;
     right: 0;
