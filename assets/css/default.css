@@ -1,0 +1,35 @@
+@charset "utf-8";
+html, body { height:100%; -webkit-text-size-adjust:none; font-family:"GmarketSans", dotum,"돋움",Arial,Sans-serif; font-size:16px;background:#fff;color:#2C2C2E;}
+body, input, select, button, textarea, h1, h2, h3, h4, h5, h6, table { line-height:1.5; font:inherit; color:inherit; }
+html, body, div, form, input, select, button, textarea, legend, fieldset, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, blockquote, address, p, th, td, caption { margin:0; padding:0; font-style: normal;box-sizing: border-box;}
+ol, ul, li { list-style:none; }
+img, fieldset { vertical-align:middle; border:0 none; }
+input, select, textarea { vertical-align:middle; resize:none; }
+input[type=text], input[type=password], input[type=submit], input[type=search], input[type=email], input[type=tel], textarea { -webkit-appearance:none; border-radius: 0;}
+select {padding:5px 20px 5px 10px;-webkit-border-radius:0; -moz-border-radius:0; -o-border-radius:0; border-radius:0;-webkit-appearance:none; border-radius: 0;border:1px solid #c9c9c9;}
+/* IE 에서 Select box 화살표 제거 */ 
+select::-ms-expand { display: none; }
+button { border:0 none; background:transparent; cursor:pointer;}
+hr { display:none; }
+legend, .hide { position:absolute; left:-9999px; }
+table caption { width:0; height:0; visibility:hidden; text-indent:-9999px; font-size:0; line-height:0; }
+table { border-collapse:collapse; border-spacing:0; width:100%;table-layout: fixed;}
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption { display:block; box-sizing: border-box;}
+/* common */
+.left_box {float:left;}
+.right_box {float:right;}
+.blind {width:1px;height:1px;font-size:0;line-height:0;position:absolute;top:0;left:-1000%;overflow:hidden;}
+a { color:inherit; text-decoration:none; }
+a:active, a:hover, a:focus { text-decoration:none; }
+.clear:after {content: '';display: block;clear: both;}
+.fl {float: left;}
+.fr {float: right;}
+.m_br {display: none;}
+.pc_br {display: block;}
+.wrap {position: relative;width:100%;}
+body {overflow-x: hidden;}
+.bg_dimmed {display:none;position:fixed;left:0;top:0;background:rgba(0,0,0,0.6);width:100%;height:100%;z-index:100;}
+@media screen and (max-width: 1164px) {
+    .m_br {display: block;}
+    .pc_br {display: none;}
+}
